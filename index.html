@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Notes Analyzer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      line-height: 1.6;
+    }
+    textarea {
+      width: 100%;
+      height: 150px;
+      padding: 0.5rem;
+      box-sizing: border-box;
+    }
+    canvas {
+      border: 1px solid #ccc;
+      margin-top: 1rem;
+      display: block;
+    }
+    #stats {
+      margin-top: 1rem;
+    }
+    #networkStatus {
+      margin-top: 1rem;
+      padding: 0.5rem;
+      border-radius: 4px;
+    }
+    .warning {
+      color: #d32f2f;
+      background-color: #ffebee;
+    }
+    .success {
+      color: #388e3c;
+      background-color: #e8f5e9;
+    }
+    .info {
+      color: #1976d2;
+      background-color: #e3f2fd;
+    }
+  </style>
+</head>
+<body>
+  <h1>Smart Notes Analyzer</h1>
+  <textarea id="noteArea" placeholder="Type your notes here..." autofocus></textarea>
+  <div id="stats">
+    <h3>Background Stats:</h3>
+    <div id="wordCount">Words: 0</div>
+    <div id="topWords">Top Words: -</div>
+    <canvas id="wordChart" width="400" height="200"></canvas>
+  </div>
+  <div id="networkStatus" class="info">Checking network status...</div>
+  <script src="app.js"></script>
+</body>
+</html>
